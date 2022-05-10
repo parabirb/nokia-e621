@@ -8,7 +8,7 @@
     if you bought me something if you got any use
     from this.
 
-    Written by parabirb in 2021.
+    Written by parabirb in 2022.
 */
 
 // deps
