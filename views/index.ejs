@@ -1,0 +1,9 @@
+<!DOCTYPE HTML>
+<%- include("templates/head", {"title": "Index"}) %>
+<body>
+    <h1>Welcome to Nokia e621!</h1>
+    <h2>Searches:</h2>
+    <% for (let i = 0; i < options.length; i++) { %>
+        <h3><a href="/search?number=<%= i %>&page=1"><%= options[i].name %></a><br></h3>
+    <% } %>
+</body>

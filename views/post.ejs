@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<%- include("templates/head", {"title": `Post - #${post.id}`}) %>
+<body>
+<h1>Post #<%= post.id %></h1>
+<h2><a href="/">Home</a>&nbsp;&nbsp;&nbsp;<a href="<%= post.file.url %>">File</a></h2>
+File URL:<br>
+<%- post.file.url %><br><br>
+File size:<br>
+<% if (post.file.size < 100000) { %> <%- Math.round(post.file.size / 10) / 100 %> kilobytes <% } else { %> <%- Math.round(post.file.size / 10000) / 100 %> megabytes <% } %><br><br>
+Character tags:<br>
+<%- post.tags.character.length !== 0 ? post.tags.character.join("<br>") : "N/A" %><br><br>
+Artist tags:<br>
+<%- post.tags.artist.length !== 0 ? post.tags.artist.join("<br>") : "N/A" %><br><br>
+Species tags:<br>
+<%- post.tags.species.length !== 0 ? post.tags.species.join("<br>") : "N/A" %><br><br>
+General tags:<br>
+<%- post.tags.general.join("<br>") %>
+</body>

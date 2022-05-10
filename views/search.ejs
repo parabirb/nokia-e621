@@ -1,0 +1,9 @@
+<!DOCTYPE HTML>
+<%- include("templates/head", {"title": `Search - ${option.name}`}) %>
+<body>
+<h1>Your search was <%= option.name %>. You are on page <%= page %>.</h1>
+<h2><a href="/">Home</a>&nbsp;&nbsp;&nbsp;<a href="/search?number=<%= number %>&page=<%= +page + 1 %>">Next page</a><% if (+page !== 1) { %>&nbsp;&nbsp;&nbsp;<a href="/search?number=<%= number %>&page=<%= +page - 1 %>">Previous page</a> <% } %></h2>
+<% for (let post of query.posts) { %>
+    <a href="/post?id=<%= post.id %>">#<%= post.id %></a> - Rating: <%= post.rating %> - <%= post.tags.artist.length !== 0 ? post.tags.artist.slice(0, 3).join(", ") : "N/A"%> - <%= post.tags.character.length !== 0 ? post.tags.character.slice(0, 3).join(", ") : "N/A" %> - <%= post.tags.species.length !== 0 ? post.tags.species.slice(0, 3).join(", ") : "N/A" %> - <%= post.tags.general.slice(0, 5).join(", ") %><br>
+<% } %>
+</body>

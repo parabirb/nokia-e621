@@ -1,0 +1,19 @@
+{
+  "name": "nokia-e621",
+  "version": "1.0.0",
+  "description": "A mirror of e621 designed to be compatible with Nokia phones.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ."
+  },
+  "author": "parabirb",
+  "license": "Unlicense",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
